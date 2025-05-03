@@ -43,7 +43,7 @@ export default function MatchScreen() {
         setCountdown((prev) => {
           if (prev <= 1) {
             clearInterval(timer);
-            router.push("../game/index");
+            router.push("../home/game");
             return 0;
           }
           return prev - 1;
@@ -145,7 +145,7 @@ export default function MatchScreen() {
 
       <Animated.View entering={FadeIn.delay(800)} className="mt-10">
         <Pressable
-          onPress={() => router.push("../game/index")}
+          onPress={() => router.push("../home/game")}
           className="bg-[#7EFF1B] py-4 px-12 rounded-full"
         >
           <Text className="text-white text-xl font-bold">START GAME</Text>
